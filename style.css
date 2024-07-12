@@ -51,7 +51,6 @@ section p {
 
 /* Footer styles */
 footer {
-    position: sticky;
     margin-top: 20px;
     text-align: center;
 }

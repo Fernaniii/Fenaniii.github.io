@@ -34,7 +34,7 @@ section {
     margin: 5px 0;
     padding: 5px;
     background: rgba(2, 2, 2, 0.4);
-    border-radius: 0 0 0 50px;
+    border-radius: 0 15px 0 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -51,6 +51,7 @@ section p {
 
 /* Footer styles */
 footer {
+    position: sticky;
     margin-top: 20px;
     text-align: center;
 }
@@ -208,7 +209,7 @@ TIMEline */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
-    margin: 1rem 5vw;
+    margin: 1em 5em;
     padding: 0;
     list-style-type: none;
   }
@@ -243,7 +244,7 @@ TIMEline */
   .card:hover .card__overlay {
     transform: translateY(0);
   }
-  
+
   .card__header {
     position: relative;
     display: flex;

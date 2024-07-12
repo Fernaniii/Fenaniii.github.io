@@ -204,7 +204,6 @@ TIMEline */
   * {
     box-sizing: border-box;
   }
-  
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -218,7 +217,8 @@ TIMEline */
     position: relative;
     display: block;
     height: 100%;  
-    border-radius: calc(var(--curve) * 1px);
+    border-radius: 0 5vh 0 5vh;
+    /* border-radius: calc(var(--curve) * 1px); */
     overflow: hidden;
     text-decoration: none;
   }
@@ -272,6 +272,7 @@ TIMEline */
   
   .card:hover .card__header {
     transform: translateY(0);
+    box-shadow: #f7f3f3;
   }
   
   .card__thumb {

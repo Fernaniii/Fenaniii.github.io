@@ -15,7 +15,7 @@ body {
 
 /* Header styles */
 header {
-    background: #333;
+    /* background: #333; */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -31,8 +31,8 @@ header p {
 
 /* Section styles */
 section {
-    margin: 5px 0;
-    padding: 5px;
+    margin: 1% 0;
+    padding: 1%;
     background: rgba(2, 2, 2, 0.4);
     border-radius: 0 15px 0 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -155,7 +155,7 @@ TIMEline */
   left: -16px;
 }
 
-/* The actual content */
+/* The actual content*/
 .content {
   padding: 20px 30px;
   background-color: white;
@@ -197,12 +197,8 @@ TIMEline */
 }
 /*cardss*/
 :root {
-    --surface-color: #fff;
+    --surface-color: #756c6c;
     --curve: 40;
-  }
-  
-  * {
-    box-sizing: border-box;
   }
   .cards {
     display: grid;
@@ -226,6 +222,7 @@ TIMEline */
   .card__image {      
     width: 100%;
     height: auto;
+    /* display: block; */
   }
   
   .card__overlay {

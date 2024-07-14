@@ -242,8 +242,8 @@ TIMEline */
 
 .card__header {
     position: relative;
-    display: grid;
-    align-items: center;
+    /* display: grid; */
+    align-items:baseline;
     gap: 2em;
     padding: 0 2em 2em ;
     border-radius: calc(var(--curve) * 1px) 0 0;    
@@ -258,6 +258,7 @@ TIMEline */
 }
 
 .card__thumb {
+  /* display: flex; */
     flex-shrink: 0;
     width: 70px;
     height: 70px;      

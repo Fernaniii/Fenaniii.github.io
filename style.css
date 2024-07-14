@@ -215,7 +215,6 @@ TIMEline */
     display: block;
     height: 100%;  
     border-radius: 0 5vh 0 5vh;
-    /* border-radius: calc(var(--curve) * 1px); */
     overflow: hidden;
     text-decoration: none;
 }
@@ -243,7 +242,7 @@ TIMEline */
 
 .card__header {
     position: relative;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     gap: 2em;
     padding: 2em;

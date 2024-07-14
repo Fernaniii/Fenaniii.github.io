@@ -242,10 +242,10 @@ TIMEline */
 
 .card__header {
     position: relative;
-    /* display: flex; */
+    display: grid;
     align-items: center;
     gap: 2em;
-    padding: 2em;
+    padding: 0 2em 2em ;
     border-radius: calc(var(--curve) * 1px) 0 0;    
     background-color: rgba(116, 112, 112, 0.1);
     transform: translateY(-100%);

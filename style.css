@@ -31,10 +31,10 @@ header p {
 
 /* Section styles */
 section {
-    margin: 1% 0;
-    padding: 1%;
+    margin: 1rem;
+    padding: 1rem;
     background: rgba(2, 2, 2, 0.4);
-    border-radius: 0 15px 0 15px;
+    border-radius: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -214,7 +214,7 @@ TIMEline */
     position: relative;
     display: block;
     height: 100%;  
-    border-radius: 0 5vh 0 5vh;
+    border-radius: .5em;
     overflow: hidden;
     text-decoration: none;
 }
@@ -230,8 +230,10 @@ TIMEline */
     left: 0;
     right: 0;
     z-index: 1;      
-    border-radius: calc(var(--curve) * 1px);    
-    background-color: var(--surface-color);      
+    border-radius: 0 1em 0;
+    /* border-radius: calc(var(--curve) * 1px);     */
+    /* background-color: var(--surface-color);       */
+   background-color: rgba(116, 112, 112, 0.7);
     transform: translateY(100%);
     transition: .7s ease-in-out;
 }
@@ -244,8 +246,8 @@ TIMEline */
     position: relative;
     /* display: grid; */
     align-items:baseline;
-    gap: 2em;
-    padding: 0 2em 2em ;
+    gap: 1em;
+    padding: 2em;
     border-radius: calc(var(--curve) * 1px) 0 0;    
     background-color: rgba(116, 112, 112, 0.1);
     transform: translateY(-100%);
@@ -254,15 +256,21 @@ TIMEline */
 
 .card:hover .card__header {
     transform: translateY(0);
-    box-shadow: #f7f3f3;
+    box-shadow: #080808;
 }
-
+.card__thumb_logo {
+  /* display: flex; */
+    flex-shrink: 0;
+    width: 3em;
+    height: 3em;      
+}
 .card__thumb {
   /* display: flex; */
     flex-shrink: 0;
-    width: 70px;
-    height: 70px;      
-    border-radius: 50%;      
+    width: 4.5em;
+    height: 4.5em;      
+    border-radius: 50%;   
+    margin-right: 1em;   
 }
 
 .card__title {
@@ -280,18 +288,18 @@ TIMEline */
 }
 
 .card__status {
-    font-size: .8em;
-    color: #D7BDCA;
+    font-size: 1em;
+    color: #f8b705;
 }
 
 .card__description {
-    padding: 0 2em 2em;
+    padding: .5em;
     margin: 0;
     color: #0c0c0c;
     font-family: "MockFlowFont";   
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    /* -webkit-line-clamp: 3; */
     overflow: hidden;
     background-color: #999;
 }

@@ -31,15 +31,16 @@ header p {
 
 /* Section styles */
 section {
-    margin: 1rem;
-    padding: 1rem;
+    margin: 1rem 0 0 0;
+    padding: .1rem;
     background: rgba(2, 2, 2, 0.4);
     border-radius: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 section h2 {
-    margin-bottom: 10px;
+  text-align: center;
+    margin: 0 1em;
     font-size: 2em;
     color: #81abbb;
 }
@@ -205,7 +206,7 @@ TIMEline */
     display: grid;
     grid-template-columns: 1fr; /* Mobile first: one card per row */
     gap: 1rem;
-    margin: 1em; /* Adjusted margin for mobile-first design */
+    margin: 0 .3em; /* Adjusted margin for mobile-first design */
     padding: 0;
     list-style-type: none;
 }

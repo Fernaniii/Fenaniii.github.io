@@ -28,6 +28,13 @@ header h1 {
 header p {
     font-size: 1.2em;
 }
+/* technology logo */
+.header_logo {
+    margin:1rem 1em;
+    flex-shrink: 0;
+    width: 3em;
+    height: 3em;      
+}
 
 /* Section styles */
 section {

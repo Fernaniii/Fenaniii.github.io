@@ -269,7 +269,7 @@ TIMEline */
 .card__thumb_logo {
   /* display: flex; */
     flex-shrink: 0;
-    width: 3em;
+    width: auto;
     height: 3em;      
 }
 .card__thumb {

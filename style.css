@@ -11,8 +11,81 @@
   --font-color: #1b1a1a;
   --header-bg-color: #333;
 }
+/* Gdrive video embedd */
+/* Title styling */
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px; /* Margin to separate title from the video section */
+  color: #333;
+}
 
+/* Video Section styling */
+.video-section {
+  padding: 2rem;
+  /* Flex properties to align videos and center them */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
+/* Video Wrapper styling */
+.video-wrapper {
+  display: block; /* Change to block to ensure full-width behavior */
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Video Title styling */
+.video-title {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  border-bottom: 2px solid #0056b3;
+  border-radius: 1em 1em 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Video Title Image styling */
+.video-title img {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Video Container styling */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+
+/* Iframe styling */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* end video */
 body {
     font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.6;

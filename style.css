@@ -31,7 +31,7 @@
       li {
           font-family: Serif;
           color: #eee;
-          font-weight: 700;
+          font-weight:   700;
           padding: 0 10px;
           height: 45px;
           margin-bottom: 45px;
@@ -116,15 +116,15 @@
 
 /* Greeting Styling */
 .greetings{
-  display: grid;
+  /* display: grid; */
   place-content: center;
-  min-height: 10vh;
+  min-height:min-content;
   background: var(--background);
 }
 .typing {
   /* // Text style */
   font-family: 'Inconsolata', Consolas, monospace;
-	font-size: 3vw;
+	font-size: 3em;
 	color: var(--title_color);
   /* // Core styles */
   position: relative;
@@ -160,8 +160,6 @@
 /* Video Section styling */
 .video-section {
   padding: 2rem 0;
-  /* Flex properties to align videos and center them */
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;

@@ -116,7 +116,7 @@
 
 /* Greeting Styling */
 .greetings{
-  /* display: grid; */
+  display: flex;
   place-content: center;
   min-height:min-content;
   background: var(--background);

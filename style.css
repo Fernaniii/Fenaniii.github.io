@@ -124,7 +124,7 @@
 .typing {
   /* // Text style */
   font-family: 'Inconsolata', Consolas, monospace;
-	font-size: 3em;
+	font-size: 3rem;
 	color: var(--title_color);
   /* // Core styles */
   position: relative;
@@ -153,8 +153,8 @@
   font-size: 28px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 30px; /* Margin to separate title from the video section */
-  color: #333;
+  margin: 30px; /* Margin to separate title from the video section */
+  color: var(--title_color);
 }
 
 /* Video Section styling */
@@ -235,7 +235,11 @@ header {
     padding: 20px 0;
     text-align: center;
 }
-
+.badge-base{
+  position: absolute;
+  top: 10;
+  left: 10;
+}
 header h1 {
     font-size: 2.5em;
 }
@@ -245,7 +249,7 @@ header p {
 }
 /* technology logo */
 .header_logo {
-    margin:1rem 1em;
+    margin: 0 1rem;
     flex-shrink: 0;
     width: auto;
     height: 10vh;      
@@ -298,6 +302,7 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+    color: rgb(119, 5, 5);
 }
 /* 
 TIMEline */

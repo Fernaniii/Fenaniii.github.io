@@ -1,451 +1,192 @@
-
-/* Reset some basic styles for consistency across browsers */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Variables */
 :root {
-  --title_color: #81abbb;
-  --steps: 16; 
-  --background: #1d1f20;
-  --content-Bg: #02020266;
-  --surface-color: #756c6c;
-  --curve: 40;
-  --font-color: #1b1a1a;
+  --main-bg-color: #f4f4f4;
   --header-bg-color: #333;
-}
-/* Greeting Styling */
-.greetings{
-  display: flex;  
-  place-content: center;
-  min-height:min-content;
-  background: var(--background);
-}
-.typing {
-  /* // Text style */
-  font-family: 'Inconsolata', Consolas, monospace;
-	font-size: 3rem;
-	color: var(--title_color);
-  /* // Core styles */
-  position: relative;
-	&::after {
-    content: "|";
-    position: absolute;
-    right: 0;
-    width: 100%;
-    color: white;
-    background: var(--background);
-    animation: typing 4s steps(var(--steps)) forwards,
-      caret 1s infinite;
-  }
-}
-/* // Animation */
-@keyframes typing {
-	to { width: 0 }
-}
-@keyframes caret {
-	50% { color: transparent }
+  --header-text-color: #fff;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --text-color: #333;
+  --card-bg-color: #fff;
+  --card-border-color: #ddd;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --header-font-size: 24px;
+  --text-font-size: 16px;
 }
 
-/* Gdrive video embedd */
-/* Title styling */
-.section-title {
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  margin: 30px; /* Margin to separate title from the video section */
-  color: var(--title_color);
-}
-
-/* Video Section styling */
-.video-section {
-  padding: 2rem 0;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* Video Wrapper styling */
-.video-wrapper {
-  display: block; /* Change to block to ensure full-width behavior */
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* Video Title styling */
-.video-title {
-  font-size: 1em;
-  font-weight: bold;
-  margin: 0;
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  border-bottom: 2px solid #0056b3;
-  /* border-radius: 1em 1em 0 0; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Video Title Image styling */
-.video-title img {
-  margin-left: 10px;
-  width: 24px;
-  height: 24px;
-}
-
-/* Video Container styling */
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  background: #000;
-}
-
-/* Iframe styling */
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-/* end video */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: var(--surface-color);
-    color: var(--font-color);
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
-/* Header styles */
 header {
-    background: var(--header-bg-color);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  text-align: center;
+  padding: 1rem;
 }
-.badge-base{
-  position: absolute;
-  top: 10;
-  left: 10;
-}
+
 header h1 {
-    font-size: 2.5em;
+  margin: 0;
+  font-size: var(--header-font-size);
 }
 
 header p {
-    font-size: 1.2em;
+  margin: 0;
 }
-/* technology logo */
-.header_logo {
-    margin: 0 1rem;
-    flex-shrink: 0;
-    width: auto;
-    height: 10vh;      
-}
-/* Section styles */
-section {
-    margin: 1rem 0 0 0;
-    padding: .1rem;
-    background: var(--content-Bg);
-    border-radius: 0;
-}
-/* .section_header {
-  box-sizing: border-box;
-  margin: 1em;
-  padding: 1em;
-  background-color: var(--font-color);
-} */
-section h2 {
+
+.main-section {
   text-align: center;
-    margin: 0 1em;
-    font-size: 2em;
-    color: #81abbb;
+  padding: 2rem;
 }
 
-section p {
-    font-size: 1em;
-    color: var(--font-color);
-
-  }
-
-
-  
-
-/* Footer styles */
-footer {
-    margin-top: 20px;
-    text-align: center;
+.header-logo {
+  margin: 0.5rem;
+  height: 50px;
 }
 
-footer p {
-    font-size: 1em;
-    color: var(--font-color);
+.greetings {
+  text-align: center;
+  margin: 2rem 0;
 }
 
-footer a {
-    color: var(--font-color);
-    text-decoration: none;
+.typing {
+  font-size: var(--header-font-size);
 }
 
-footer a:hover {
-    text-decoration: underline;
-    color: rgb(119, 5, 5);
-}
-/* 
-TIMEline */
-
-/* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-}
-
-/* Container around content */
 .container {
-  padding: 10px 40px;
+  padding: 2rem;
   position: relative;
-  background-color: inherit;
-  width: 50%;
 }
 
-/* The circles on the timeline */
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
+.container.right {
+  margin-left: auto;
 }
 
-/* Place the container to the left */
-.left {
-  left: 0;
+.container.left {
+  margin-right: auto;
 }
 
-/* Place the container to the right */
-.right {
-  left: 50%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
-}
-
-/* The actual content*/
 .content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  border-radius: 8px;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-/* Place the timelime to the left */
-  .timeline::after {
-    left: 31px;
-  }
-
-/* Full-width containers */
-  .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-/* Make sure that all arrows are pointing leftwards */
-  .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-/* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 15px;
-  }
-
-/* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
-  }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-/*cardss*/
+
+.card-section {
+  margin: 2rem 0;
+}
+
 .cards {
-    display: grid;
-    grid-template-columns: 1fr; /* Mobile first: one card per row */
-    gap: 1rem;
-    margin: 0 .3em; /* Adjusted margin for mobile-first design */
-    padding: 0;
-    list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .card {
-    position: relative;
-    display: block;
-    height: 100%;  
-    border-radius: .5em;
-    overflow: hidden;
-    text-decoration: none;
+  display: block;
+  position: relative;
+  background: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-color);
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease;
 }
 
-.card__image {      
-    width: 100%;
-    height: auto;
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
 }
 
 .card__overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;      
-    border-radius: 0 1em 0;
-    /* border-radius: calc(var(--curve) * 1px);     */
-    /* background-color: var(--surface-color);       */
-   /* background-color: #747070b3; */
-   background-color: inherit; 
-   transform: translateY(100%);
-    transition: .7s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
 
 .card:hover .card__overlay {
-    transform: translateY(0);
+  opacity: 1;
 }
 
 .card__header {
-    position: relative;
-    /* display: grid; */
-    align-items:baseline;
-    gap: 1em;
-    padding: 2em;
-    border-radius: calc(var(--curve) * 1px) 0 0;    
-    /* background-color: rgba(234, 239, 241, 0.1); */
-    background-color:   rgba(156, 180, 186, .5);
-    transform: translateY(-100%);
-    transition: .2s ease-in-out;
+  display: flex;
+  align-items: center;
 }
 
-.card:hover .card__header {
-    transform: translateY(0);
-    box-shadow: #080808;
-}
-.card__thumb_logo {
-  /* display: flex; */
-    flex-shrink: 0;
-    width: auto;
-    height: 3em;      
-}
 .card__thumb {
-  /* display: flex; */
-    flex-shrink: 0;
-    width: 4.5em;
-    height: 4.5em;      
-    border-radius: 50%;   
-    margin-right: 1em;   
+  border-radius: 50%;
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.card__thumb_logo {
+  border-radius: 50%;
+  height: 30px;
+  margin-right: 0.5rem;
 }
 
 .card__title {
-    font-size: 1em;
-    margin: 0 0 .3em;
-    color: var(--font-color);
-}
-
-.card__tagline {
-    display: block;
-    margin: 1em 0;
-    font-family: "MockFlowFont";  
-    font-size: .8em; 
-    color: var(--font-color);  
+  font-size: 18px;
+  margin: 0;
 }
 
 .card__status {
-    font-size: 1em;
-    color: #f8b705;
+  font-size: 14px;
 }
 
 .card__description {
-    padding: .5em;
-    margin: 0;
-    color: var(--font-color);
-    font-family: "MockFlowFont";   
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    background-color: #999;
+  margin: 0.5rem 0 0;
 }
 
-/* Media query for tablets and above */
-@media (min-width: 600px) {
-    .cards {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
+footer {
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+  text-align: center;
+  padding: 1rem;
 }
 
-/* Media query for larger screens */
-@media (min-width: 1024px) {
-    .cards {
-        grid-template-columns: repeat(3, 1fr); /* Three cards per row */
-    }
+footer .social {
+  margin: 1rem 0;
+}
+
+footer a {
+  color: var(--link-color);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  color: var(--link-hover-color);
 }

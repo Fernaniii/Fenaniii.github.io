@@ -1,0 +1,245 @@
+/* Variables for 60-30-10 Color Rule */
+:root {
+    --primary-color: #1a1a1a; /* 60% - Dark Color */
+    --secondary-color: #e0e0e0; /* 30% - Light Color */
+    --accent-color: #f15a29; /* 10% - Accent Color */
+    --text-color: var(--primary-color);
+    --background-color: var(--secondary-color);
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Navbar Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+}
+
+.logo img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border-radius: 5px;
+}
+
+/* Main Content Adjustment */
+.main {
+    margin-top: 70px; /* Adjust based on header height */
+    padding: 20px;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+}
+
+/* Welcome Section Styles */
+#welcome {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.welcome-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.welcome-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.welcome-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-text {
+    flex: 2;
+    text-align: left;
+}
+
+.welcome-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.welcome-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Icon Boxes under the Welcome Section */
+.icon-boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.icon-box {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: 120px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icon-box i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.icon-box p {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #welcome {
+        padding: 40px 20px;
+    }
+
+    .welcome-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .welcome-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .welcome-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .welcome-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .welcome-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Navbar */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+}

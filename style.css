@@ -26,6 +26,12 @@ header {
   color: var(--header-text-color);
   text-align: center;
   padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -40,6 +46,7 @@ header p {
 .main-section {
   text-align: center;
   padding: 2rem;
+  padding-top: calc(60px + 2rem); /* Adjust based on the height of your navbar */
 }
 
 .header-logo {
@@ -176,7 +183,7 @@ footer {
   text-align: center;
   padding: 1rem;
 }
-
+  
 footer .social {
   margin: 1rem 0;
 }

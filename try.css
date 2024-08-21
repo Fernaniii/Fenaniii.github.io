@@ -180,7 +180,7 @@ nav a:hover {
     text-align: left;
 }
 .welcome-text h1 {
-    /* font-size: 3rem; */
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
@@ -443,7 +443,7 @@ h1 {
 .projects_card {
     margin: 40px;
     position: relative;
-    max-width: 300px;
+    max-width: 400px;
     max-height: 300px;
     box-shadow: 0 40px 60px -6px black;
   }

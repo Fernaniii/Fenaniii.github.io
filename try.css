@@ -112,6 +112,26 @@ nav a:hover {
 .welcome-content {
     flex-direction: column;
 }
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    nav a {
+        font-size: 0;
+    }
+
+    nav a i {
+        font-size: 1.2rem;
+    }
+
+    nav a:hover {
+        font-size: 0;
+    }
 }
 
 /* ================== Main Content Adjustment ================== */

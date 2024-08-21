@@ -84,13 +84,7 @@ nav a:hover {
     color: var(--background-color);
     border-radius: 5px;
 }
-
-/* Hide text on small screens, show only icons */
-@media (max-width: 600px) {
-
-.welcome-content {
-    flex-direction: column;
-}
+@media (max-width: 200px) {
     nav ul {
         flex-direction: row;
         align-items: center;
@@ -111,6 +105,13 @@ nav a:hover {
     nav a:hover {
         font-size: 0;
     }
+}
+/* Hide text on small screens, show only icons */
+@media (max-width: 600px) {
+
+.welcome-content {
+    flex-direction: column;
+}
 }
 
 /* ================== Main Content Adjustment ================== */
@@ -369,9 +370,7 @@ h1 {
 
 /* Responsive Timeline */
 @media (max-width: 660px) {
-    h1{
-        text-justify: distribute-all-lines;
-    }
+
     .timeline {
         width: 100%;
         padding: 4em 0 1em 0;

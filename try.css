@@ -87,8 +87,12 @@ nav a:hover {
 
 /* Hide text on small screens, show only icons */
 @media (max-width: 600px) {
+
+.welcome-content {
+    flex-direction: column;
+}
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
@@ -154,14 +158,13 @@ nav a:hover {
     flex: 2;
     text-align: left;
 }
-
 .welcome-text h1 {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     margin-bottom: 10px;
 }
 
 .welcome-text h2 {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     margin-bottom: 20px;
     color: var(--secondary-color);
 }
@@ -366,6 +369,9 @@ h1 {
 
 /* Responsive Timeline */
 @media (max-width: 660px) {
+    h1{
+        text-justify: distribute-all-lines;
+    }
     .timeline {
         width: 100%;
         padding: 4em 0 1em 0;
@@ -456,7 +462,7 @@ h1 {
     padding: 2%;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
-  }
+  }  
   
   .certificate_card img,  .projects_card img {
     width: 100%;

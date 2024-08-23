@@ -108,10 +108,13 @@ nav a:hover {
 }
 /* Hide text on small screens, show only icons */
 @media (max-width: 600px) {
-
-.welcome-content {
-    flex-direction: column;
-}
+    .my_name{
+        display: flex;
+        flex-direction: column;
+    }    
+    .welcome-content {
+        flex-direction: column;
+    }
     nav ul {
         flex-direction: row;
         align-items: center;
@@ -180,10 +183,14 @@ nav a:hover {
     text-align: left;
 }
 .welcome-text h1 {
-    font-size: 3rem;
+    font-size: 3em;
     margin-bottom: 10px;
+    padding: 10px;
 }
-
+.my_name{
+    display: flex;
+    flex-direction: row;
+}
 .welcome-text h2 {
     /* font-size: 2rem; */
     margin-bottom: 20px;

@@ -22,6 +22,9 @@ body {
   background-color: var(--background-color);
   line-height: 1.6em;
 }
+section{
+  padding-bottom: 3em ;
+}
 
 /* ================== Navbar Styles ================== */
 header {
@@ -35,6 +38,9 @@ header {
   padding: 10px;
   height: 70px; /* Fixed height for navbar */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+hr {
+  border: 1px solid var(--accent-color);
 }
 
 nav {
@@ -237,12 +243,7 @@ nav a:hover {
 
 /* ================== Timeline Styles ================== */
 #timeline {
-  padding: 20px;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
+  padding: 2px;
 }
 
 .timeline {
@@ -519,7 +520,9 @@ h1 {
 #certificates h1, #projects h1, #video  h1 {
   font-size: 2.8rem;
   color: var(--text-color);
-  margin: 40px 0 20px 0;
+  margin-top: 20px;
+  padding-top: 20px;
+  text-align: center;
 }
 
 /* ================== Video Section Styles ================== */      
@@ -527,11 +530,6 @@ h1 {
   padding: 40px 20px;
   background: var(--background-color);
   color: var(--text-color);
-}
-
-#video h1 {
-  text-align: center;
-  margin-bottom: 1em;
 }
 
 .video-grid {

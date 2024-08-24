@@ -459,6 +459,9 @@ nav a:hover {
   max-height: 300px;
   box-shadow: 0 40px 60px -6px black;
 }
+.projects_card:hover {
+  box-shadow: 0 40px 60px -6px var(--accent-color);
+}
 
 /* ================== Certificates Section Styles ================== */
 
@@ -483,7 +486,10 @@ nav a:hover {
   max-width: 400px;
   max-height: 300px;
   overflow: hidden;
-  box-shadow: 0 40px 60px -6px black;
+  box-shadow: 0 10px 60px -6px black;
+}
+.certificate_card:hover {
+  box-shadow: 0 40px 60px -6px var(--accent-color);
 }
 
 .card-title {
@@ -522,7 +528,8 @@ nav a:hover {
   height: 100%;
 }
 
-#certificates h1, #projects h1, #video  h1 {
+
+#timeline h1, #certificates h1, #projects h1, #video  h1 {
   font-size: 2.8rem;
   color: var(--text-color);
   margin-top: 20px;

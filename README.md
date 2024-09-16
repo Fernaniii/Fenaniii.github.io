@@ -13,7 +13,7 @@
 - [X] Calculator
 - [ ] flashcard creator with gpt support(Hard)
 - [ ] Cashier app
-- [ ] Product Landing Page
+- [X] Product Landing Page
 
 
 

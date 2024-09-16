@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic Cashier App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cashier App</h1>
+        <div class="item-list">
+            <div class="item">
+                <span>Cheeseburger</span>
+                <span>$5.00</span>
+                <input type="number" id="cheeseburger-qty" value="0" min="0">
+            </div>
+            <div class="item">
+                <span>Fries</span>
+                <span>$2.50</span>
+                <input type="number" id="fries-qty" value="0" min="0">
+            </div>
+            <div class="item">
+                <span>Soda</span>
+                <span>$1.50</span>
+                <input type="number" id="soda-qty" value="0" min="0">
+            </div>
+            <div class="item">
+                <span>Salad</span>
+                <span>$3.00</span>
+                <input type="number" id="salad-qty" value="0" min="0">
+            </div>
+        </div>
+        <button onclick="calculateTotal()">Calculate Total</button>
+        <h2>Total: $<span id="total">0.00</span></h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

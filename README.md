@@ -10,3 +10,10 @@
 - [ ] Create descriptive Game [for example google dinasor with twist]
 - [ ] character stats like page
 - [ ] on scroll effect
+- [X] Calculator
+- [ ] flashcard creator with gpt support(Hard)
+- [ ] Cashier app
+- [ ] Product Landing Page
+
+
+

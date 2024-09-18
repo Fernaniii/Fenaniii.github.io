@@ -14,6 +14,8 @@
 - [ ] flashcard creator with gpt support(Hard)
 - [ ] Cashier app
 - [X] Product Landing Page
+- [ ] Email Newsletter
+
 
 
 

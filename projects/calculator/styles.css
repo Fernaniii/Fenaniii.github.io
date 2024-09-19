@@ -13,7 +13,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 200px;
+    width: 400px;
 }
 
 .display {
@@ -38,6 +38,13 @@ body {
     background-color: #eee;
     cursor: pointer;
     outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: orange;
 }
 
 .btn:active {
@@ -51,4 +58,30 @@ body {
 
 .operator:active {
     background-color: #e6951a;
+}
+
+/* Media query for cellphone screens */
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0; 
+        overflow: hidden;
+    }
+
+    .display {
+        font-size: 8vw;
+        height: 10vh; 
+    }
+    
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 1fr;
+        height: calc(90% - 15vh); /* Adjust based on display height */
+    }
+
+    .btn {
+        padding: 2vh;
+        font-size: 6vw; /* Larger font size for smaller screens */
+    }
 }

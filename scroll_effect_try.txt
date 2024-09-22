@@ -1,0 +1,81 @@
+  <div class="scroll-container">
+        <div class="carousel-primary">
+          <img src="resources/img/ADVANCE_network_security.jpg" alt="advance">
+          <img src="resources/img/ADvancing_net_SEcurityCERT.jpg" alt="">
+          <img src="resources/img/BOSCH_training_organizer (1).jpg" alt="">
+          <img src="resources/img/calendar-with-checklist-date-schedule-3d-icon.jpg" alt="">
+          <!-- Duplicate Images -->
+          <img src="resources/img/ADVANCE_network_security.jpg" alt="advance">
+          <img src="resources/img/ADvancing_net_SEcurityCERT.jpg" alt="">
+          <img src="resources/img/BOSCH_training_organizer (1).jpg" alt="">
+          <img src="resources/img/calendar-with-checklist-date-schedule-3d-icon.jpg" alt="">
+        </div>
+        <div class="carousel-secondary">
+          <img src="resources/img/CODEQUEST_cerrtificate.jpg" alt="">
+          <img src="resources/img/dynamic_CloudComputing_Participation_page-0001 (1).jpg" alt="">
+          <img src="resources/img/FernandoThumb.jpg" alt="">
+          <img src="resources/img/FernandoThumb.jpg" alt="">
+          <!-- Duplicate Images -->
+          <img src="resources/img/CODEQUEST_cerrtificate.jpg" alt="">
+          <img src="resources/img/dynamic_CloudComputing_Participation_page-0001 (1).jpg" alt="">
+          <img src="resources/img/FernandoThumb.jpg" alt="">
+          <img src="resources/img/FernandoThumb.jpg" alt="">
+        </div>
+      </div>
+
+
+
+
+
+      css!!
+      /* ========================== scroll effect =========================== */
+.scroll-container {
+  height: auto;
+  overflow: hidden;
+}
+
+.carousel-primary,
+.carousel-secondary {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+}
+
+.carousel-primary img,
+.carousel-secondary img {
+  max-height: 100px;
+  width: auto;
+  margin: 0 10px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.carousel-primary {
+  animation: scroll-horizontal 20s linear infinite;
+  top: 0; /* Adjust as needed */
+}
+
+.carousel-secondary {
+  animation: scroll-horizontal-secondary 20s linear infinite;
+  top: 120px; /* Adjust as needed to avoid overlap */
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-horizontal-secondary {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

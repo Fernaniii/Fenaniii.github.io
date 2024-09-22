@@ -56,14 +56,14 @@ function ReadToDoItems() {
       ${
         style === ""
           ? ""
-          : '<img class="todo-controls" src="/images/check-mark.png" />'
+          : '<div class="todo-controls"><i class="fa-solid fa-check fa-lg" style="color: #000000;"></i></div>'
       }</div><div>
       ${
         style === ""
-          ? '<img class="edit todo-controls" onclick="UpdateToDoItems(this)" src="/images/pencil.png" />'
+          ? '<div class="edit todo-controls" onclick="UpdateToDoItems(this)" src="/images/pencil.png"><i class="fa-solid fa-pen-to-square fa-lg" style="color: #000000;"></i></div>'
           : ""
       }
-      <img class="delete todo-controls" onclick="DeleteToDoItems(this)" src="/images/delete.png" /></div></div>`;
+      <div class="delete todo-controls" onclick="DeleteToDoItems(this)"><i class="fa-regular fa-trash-can fa-lg" style="color: #000000;"></i><div/></div></div>`;
       li.innerHTML = todoItems;
       listItems.appendChild(li);
     });

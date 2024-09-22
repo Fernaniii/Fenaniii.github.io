@@ -23,7 +23,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    padding-left: 5px;
+    padding-left: 5px 20px;
     justify-content: center;
   }
   .todo-body {
@@ -86,7 +86,13 @@ body {
     opacity: 0;
     animation: new-item-animation 0.3s linear forwards;
   }
-  
+  .icon{
+    border-radius: 50%;
+    padding : 20px;
+    background: yellow;
+  }
+
+
   @keyframes new-item-animation {
     from {
       opacity: 0;

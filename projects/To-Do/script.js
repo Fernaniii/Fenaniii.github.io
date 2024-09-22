@@ -27,8 +27,8 @@ function CreateToDoItems() {
   
       let li = document.createElement("li");
       const todoItems = `<div title="Hit Double Click and Complete" ondblclick="CompletedToDoItems(this)">${todoValue.value}</div><div>
-                      <img class="edit todo-controls" onclick="UpdateToDoItems(this)" src="/images/pencil.png" />
-                      <img class="delete todo-controls" onclick="DeleteToDoItems(this)" src="/images/delete.png" /></div></div>`;
+                      <div class="edit todo-controls" onclick="UpdateToDoItems(this)" src="/images/pencil.png"><i class="fa-solid fa-pen-to-square fa-lg" style="color: #000000;"></i></div>
+                      <div class="delete todo-controls" onclick="DeleteToDoItems(this)"><i class="fa-regular fa-trash-can fa-lg" style="color: #000000;"></i><div/></div></div>`;
       li.innerHTML = todoItems;
       listItems.appendChild(li);
   
@@ -136,7 +136,8 @@ function DeleteToDoItems(e) {
 function CompletedToDoItems(e) {
     if (e.parentElement.querySelector("div").style.textDecoration === "") {
       const img = document.createElement("img");
-      img.src = "/images/check-mark.png";
+      // <div class="todo-controls"><i class="fa-solid fa-check fa-lg" style="color: #000000;"></i></div>
+      img.src = "projects/To-Do/icon/check.png";
       img.className = "todo-controls";
       e.parentElement.querySelector("div").style.textDecoration = "line-through";
       e.parentElement.querySelector("div").appendChild(img);

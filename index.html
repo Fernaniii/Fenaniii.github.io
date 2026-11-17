@@ -3,274 +3,421 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website of Fernando Jose Magnaye, showcasing projects, certifications, and more.">
-    <meta name="keywords" content="portfolio, web development, projects,  certifications">
-    <title>Fernando Jose Magnaye's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Fernando Jose Magnaye — Computer Engineer</title>
+    <meta name="description" content="Portfolio of Fernando Jose Magnaye, Computer Engineer and Jr. Software Developer — projects, certifications, and experience in .NET, Flutter and IoT.">
+    <meta name="keywords" content="portfolio, web development, projects, certifications, .NET, Flutter, Arduino">
+    <meta name="theme-color" content="#0d0d10">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fernando Jose Magnaye — Computer Engineer">
+    <meta property="og:description" content="Projects, certifications, and experience in .NET, Flutter and IoT.">
+    <meta property="og:image" content="https://fernaniii.github.io/Fenaniii.github.io/resources/img/FernandoThumb.jpg">
+    <meta property="og:url" content="https://fernaniii.github.io/Fenaniii.github.io/">
+
+    <link rel="icon" type="image/png" href="resources/img/bonito_san.png">
+
+    <script>
+        (function () {
+            var root = document.documentElement;
+            root.classList.add('js');
+            try {
+                var saved = localStorage.getItem('theme');
+                if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+            } catch (e) { /* storage unavailable */ }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-  
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="resources/img/bonito_san.png" alt="Logo" width="50" height="50">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main">
+            <a href="#welcome" class="brand">
+                <img src="resources/img/bonito_san.png" alt="" width="36" height="36">
+                <span>Fernando<span class="dot">.</span></span>
+            </a>
+
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#welcome">Home</a></li>
+                <li><a href="#timeline">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="icon-btn theme-toggle" type="button" aria-label="Toggle color theme">
+                    <i class="fas fa-sun icon-sun" aria-hidden="true"></i>
+                    <i class="fas fa-moon icon-moon" aria-hidden="true"></i>
+                </button>
+                <button class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-menu" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
             </div>
-            <ul>
-                <li><a href="#welcome"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#timeline"><i class="fas fa-clock"></i> Timeline</a></li>
-                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
-                <li><a href="#video"><i class="fas fa-video"></i> Video</a></li>
-            </ul>            
         </nav>
     </header>
-    <section id="welcome">
-        <div class="welcome-content">
-            <div class="welcome-image">
-                <img src="resources/img/FernandoThumb.jpg" alt="Fernando">
-            </div>
-            <div class="welcome-text">
-                <div class="my_name"><span><h1>Fernando Jose</span><span> Magnaye</span></h1></div>
-                <h2>Computer Engineer</h2> 
-                <p>Hello! I'm a passionate Developer. This is my portfolio showcasing my work, experience, and achievements. Feel free to explore and get in touch!</p>
-                <div class="icon-boxes">
-                    <div class="icon-box">
-                        <i class="fab fa-flutter"></i>
-                        <p>Flutter</p>
+
+    <main id="main">
+        <!-- ============ Hero ============ -->
+        <section id="welcome" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text reveal">
+                    <span class="status-pill"><span class="status-dot" aria-hidden="true"></span> Open to opportunities</span>
+                    <h1>Fernando Jose <span class="accent">Magnaye</span></h1>
+                    <p class="hero-role">Computer Engineer · Jr. Software Developer</p>
+                    <p class="hero-pitch">Hello! I'm a passionate developer building .NET business apps, Flutter mobile apps and IoT systems. Explore my work and feel free to get in touch!</p>
+
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="#contact" class="btn btn-ghost">Get in touch</a>
                     </div>
-                    <div class="icon-box">
-                        <i class="fab fa-arduino"></i>
-                        <p>Arduino</p>
-                    </div>
-                    <div class="icon-box">
-                        <i class="fab fa-microsoft"></i>
-                        <p>.NET</p>
-                    </div>
+
+                    <ul class="stack" aria-label="Tech stack">
+                        <li class="chip"><i class="fab fa-flutter" aria-hidden="true"></i> Flutter</li>
+                        <li class="chip"><img src="resources/logo/arduino.png" alt="" width="16" height="16"> Arduino</li>
+                        <li class="chip"><i class="fab fa-microsoft" aria-hidden="true"></i> .NET</li>
+                    </ul>
+
+                    <ul class="socials">
+                        <li><a class="social-btn" href="https://www.linkedin.com/in/fernando-jose-magnaye050505/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                        <li><a class="social-btn" href="https://github.com/Fernaniii" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                        <li><a class="social-btn" href="mailto:fernandojosem931@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="hero-photo reveal">
+                    <img src="resources/img/FernandoThumb.jpg" alt="Portrait of Fernando Jose Magnaye" width="400" height="400">
                 </div>
             </div>
-        </div>
-    </section>
-        <section id="timeline">
-            <h1>About Me</h1>
-            <!-- The Timeline -->
-            
-            <ul class="timeline">
-                            
-                <!-- Item 1 -->
-                <li>
-                    <div class="direction-l">
-                        <div class="flag-wrapper">
-                            <span class="flag text-uppercase">ACES Credit Experts & Solutions</span>
-                            <span class="time-wrapper"><span class="time">2024 - Present</span></span>
-                        </div>
-                        <div class="desc">
-                            <ul class="list-unstyled mt-2">
+        </section>
+
+        <!-- ============ About / Timeline ============ -->
+        <section id="timeline" class="section section--alt">
+            <div class="container">
+                <header class="section-head reveal">
+                    <p class="kicker">Journey</p>
+                    <h2>About Me</h2>
+                </header>
+
+                <ol class="timeline">
+                    <li class="timeline-item reveal">
+                        <article class="timeline-card">
+                            <div class="timeline-head">
+                                <h3>ACES Credit Experts &amp; Solutions</h3>
+                                <span class="badge">2024 – Present</span>
+                            </div>
+                            <ul class="bullets">
                                 <li><strong>Jr. Software Developer</strong></li>
                                 <li>Lead Developer for the <strong>AcePay HRIS</strong></li>
                                 <li>Expertise in <strong>.NET</strong>, <strong>Blazor Identity</strong>, <strong>Team Collaborations</strong></li>
                             </ul>
-                        </div>
-                    </div>
-                </li>
+                        </article>
+                    </li>
 
-
-                <!-- Item 2 -->
-                <li>
-                    <div class="direction-r">
-                        <div class="flag-wrapper">
-                            <span class="flag">Seminars and Workshops</span>
-                            <span class="time-wrapper"><span class="time">2013 - 2024</span></span>
-                        </div>
-                        <div class="desc">
-                            <ul>
+                    <li class="timeline-item reveal">
+                        <article class="timeline-card">
+                            <div class="timeline-head">
+                                <h3>Seminars and Workshops</h3>
+                                <span class="badge">2013 – 2024</span>
+                            </div>
+                            <ul class="bullets">
                                 <li>Attending various seminars to enhance job-finding skills and professional capabilities</li>
                                 <li>Participated in workshops focused on engineering, technology, and career development</li>
                                 <li>Creating projects for in-depth learning</li>
                             </ul>
-                        </div>
-                    </div>
-                </li>
-              
-                <!-- Item 3 -->
-                <li>
-                    <div class="direction-l">
-                        <div class="flag-wrapper">
-                            <span class="flag">Tanauan City College</span>
-                            <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
-                        </div>
-                        <div class="desc">
-                            <ul>
+                        </article>
+                    </li>
+
+                    <li class="timeline-item reveal">
+                        <article class="timeline-card">
+                            <div class="timeline-head">
+                                <h3>Tanauan City College</h3>
+                                <span class="badge">2011 – 2013</span>
+                            </div>
+                            <ul class="bullets">
                                 <li>Proficient in Object-Oriented Programming (OOP)</li>
-                                <li>Developed prototype project: RABBITECH; Automatic Feeding and Monitoring System for Rabbitry</li>
+                                <li>Developed prototype project: RABBITECH — Automatic Feeding and Monitoring System for Rabbitry</li>
                                 <li>Gained fundamental knowledge of <strong>C, C++, C#, Python, Arduino, Verilog, VHDL</strong>, and <strong>VBA</strong></li>
-                                <li>Exposed to technologies such as <strong>AutoCAD</strong>, <strong>Xilinx</strong>, <strong>Matlab</strong>, and <strong>VS Code</strong></li>        
-                        </div>
-                    </div>
-                </li>
-            
-                <!-- Item 4 -->
-                <li>
-                    <div class="direction-r">
-                        <div class="flag-wrapper">
-                            <span class="flag">Tanuan Institute</span>
-                            <span class="time-wrapper"><span class="time">2008 - 2011</span></span>
-                        </div>
-                        <div class="desc">
-                            <ul>
+                                <li>Exposed to technologies such as <strong>AutoCAD</strong>, <strong>Xilinx</strong>, <strong>Matlab</strong>, and <strong>VS Code</strong></li>
+                            </ul>
+                        </article>
+                    </li>
+
+                    <li class="timeline-item reveal">
+                        <article class="timeline-card">
+                            <div class="timeline-head">
+                                <h3>Tanauan Institute</h3>
+                                <span class="badge">2008 – 2011</span>
+                            </div>
+                            <ul class="bullets">
                                 <li>Developed core skills in networking concepts</li>
                                 <li>Achieved <strong>NCII</strong> Certification in <strong>Computer System Servicing</strong></li>
                                 <li>Gained hands-on experience in <strong>Java Development</strong> with <strong>NetBeans</strong></li>
                             </ul>
-                        </div>
-                    </div>
-                </li>
-              
-            </ul>            
-    </section>        
-    <section id="projects">
-        <h1>Projects</h1>
-        
-        <div class="cards">
-          <div class="projects_card">
-            <a href="https://github.com/Fernaniii/Rabbittech_Auto-Feeder" target="_blank" class="Rabbitech_card-link">
-            <h2 class="card-title">Rabbitech Autofeeder with MQTT and Flutter</h2>
-            <img src="https://camo.githubusercontent.com/f86e2d7e07ac9e5a2f63896123b3711eb41ec1ef6e3533e7972109c1104271a4/68747470733a2f2f64726976652e676f6f676c652e636f6d2f75633f69643d317235576f76316231454d6570764e5f75516d365a546e344c34767161454d2d73" alt="Rabbbitech">
-            <p class="card-desc">
-              A comprehensive system for automatic feeding and monitoring of rabbits using MQTT and various sensors.
-            </p>
-            </a>
+                        </article>
+                    </li>
+                </ol>
             </div>
-            <div class="projects_card">
-                <a href="projects/Landing Page/index.html" target="_blank" class="Rabbitech_card-link">
-                <h2 class="card-title">Product Landing Page</h2>
-                <img src="projects/Landing Page/Thumbnail.png" alt="Landing Page">
-                <p class="card-desc">
-                  Landing Page for the honey
-                </p>
-                </a>
-            </div>
-            <div class="projects_card">
-              <a href="projects/calculator/index.html" target="_blank" class="Rabbitech_card-link">
-              <h2 class="card-title">Simple Calculator</h2>
-              <img src="projects/calculator/Thumbnail.png" alt="Calculator">
-              <p class="card-desc">
-                A simple Calculator for Practice.
-              </p>
-              </a>
-            </div>
-            <div class="projects_card">
-                <a href="projects/cashier app/index.html" target="_blank" class="Rabbitech_card-link">
-                <h2 class="card-title">Simple Cashier app</h2>
-                <img src="projects/cashier app/Thumbnail.png" alt="Cashier app">
-                <p class="card-desc">
-                  A simple cashier app for Practice.
-                </p>
-                </a>
-            </div>
-            <div class="projects_card">
-                <a href="projects/To-Do/index.html" target="_blank" class="Rabbitech_card-link">
-                <h2 class="card-title">To do list</h2>
-                <img src="projects/cashier app/Thumbnail.png" alt="ToDo list">
-                <p class="card-desc">
-                  interactive todo app
-                </p>
-                </a>
-            </div>
+        </section>
 
-          <!-- other projects -->
-        </div>
-        
-    </section>
-<hr>
-    <section id="certificates">
-        <h1>Certificates</h1>
-            <div class="cards">
-                <div class="certificate_card">
-                    <a href="https://www.freecodecamp.org/certification/Fernaniii/responsive-web-design" target="_blank" class="Rabbitech_card-link">  
-                    <h2 class="card-title">Responsive Web Design</h2>
-                    <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/1*TKXSmO_vghw2G5aDRcf2Ww.png" alt="Rabbbitech">
-                    <p class="card-desc">
-                        used
-                    </p>
-                    </a>
+        <!-- ============ Projects ============ -->
+        <section id="projects" class="section">
+            <div class="container">
+                <header class="section-head reveal">
+                    <p class="kicker">Work</p>
+                    <h2>Projects</h2>
+                </header>
+
+                <div class="filters" role="group" aria-label="Filter projects">
+                    <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+                    <button type="button" class="filter-btn" data-filter="iot" aria-pressed="false">IoT &amp; Mobile</button>
                 </div>
-                <div class="certificate_card">
-                    <a href="https://drive.google.com/file/d/1pul5_R38Vkcfp_vXZFLFohqDu5khEBrQ/view?usp=drive_link" target="_blank" class="Rabbitech_card-link">  
-                    <h2 class="card-title">CODEQUEST: From Code Novice to Job Ready Engineer</h2>
-                    <img src="resources\img\CODEQUEST_cerrtificate.jpg" alt="CODEQUEST">
-                    <p class="card-desc">
-                        <em>June 2024</em> Completed eight-day boot camp focused on developing <strong>MVC applications using ASP.NET</strong>. Gained hands-on experience with <strong>MS SQL</strong> for testing and implementation, <strong>Entity Framework</strong> for data access, and <strong>Bootstrap</strong> for page design. Additionally, worked with <strong>JSON, JavaScript, C#, HTML, and CSS</strong>
-                    </p>
-                    </a>
-                </div>
-                <div class="certificate_card">
-                        <a href="https://drive.google.com/file/d/1pSXK2d6RtopqBRrJjIk44VVMLTNJurrC/view?usp=drive_link" target="_blank" class="card-link">  
-                        <h2 class="card-title">Basic Occupational Safety and Health (BOSH) Training</h2>
-                        <img src="resources\img\BOSCH_training_organizer (1).jpg" alt="BOSCH_training_organizer">
-                        <p class="card-desc">
-                            May 04, 2024</em> Organized a seminar develops essential skills like <strong>planning and scheduling</strong>, using <strong>Agile</strong> and <strong>Waterfall</strong> methodologies for flexibility and structure. <strong>Content marketing</strong> and <strong>outreach strategies</strong> drive engagement, while <strong>public speaking</strong> enhances audience interaction. <strong>Contingency planning</strong> and <strong>event management software</strong> ensure smooth operations and adaptability. These experiences boost both <em>event execution</em> and <em>professional growth</em>.
-                        </p>
-                        </a>
-                </div>
-                <div class="certificate_card">
-                    <a href="https://drive.google.com/file/d/1q2AoHfCab4PPD4Cqh_oIGbLWLt9jkdi1/view?usp=drive_link" target="_blank" class="card-link">  
-                    <h2 class="card-title">Unlocking the Future: An Introduction to Machine Learning</h2>
-                    <img src="resources\img\unlockingFuture_MachineLearning_Python(organizer).png" alt="Machine_learning">
-                    <p class="card-desc">
-                        <em>april 3, 2024</em> Organized a seminar on <strong>machine learning</strong> with <strong>Python</strong> and <strong>Jupyter Notebooks</strong> sharpens skills in <strong>event management</strong>, <strong>workflow optimization</strong>, and <strong>strategic coordination</strong>. <strong>Content marketing</strong> and <strong>data outreach</strong> enhance <em>engagement</em>, while <strong>proactive risk management</strong> and <strong>event planning tools</strong> ensure <em>successful execution</em>.
-                    </p>
-                    </a>
-                </div>
-                <div class="certificate_card">
-                    <a href="https://drive.google.com/file/d/1pImqYwiHa0KayNwQgl4foMwh0XeuHH-L/view?usp=drive_link" target="_blank" class="Rabbitech_card-link">  
-                    <h2 class="card-title">Advancing Network Security: Implementing Network and Security Policies and the Zero Trust Model Approach</h2>
-                    <img src="resources\img\ADvancing_net_SEcurityCERT.jpg" alt="Net_security_certificate">
-                    <p class="card-desc">
-                        Enhancing <strong>network security policies</strong> with the <strong>Zero Trust model</strong>, which operates on "<em>never trust, always verify</em>," assumes every access attempt is a threat. Key elements include <strong>access control</strong>, <strong>data protection</strong>, and <strong>incident response</strong>. Leveraging <strong>advanced methodologies</strong> and <strong>efficiency frameworks</strong> optimizes <strong>workflow</strong> and ensures <strong>project alignment</strong>. <strong>Proactive risk management</strong>, <strong>event planning tools</strong>, <strong>multi-factor authentication</strong>, <strong>network segmentation</strong>, and <strong>continuous monitoring</strong> fortify security.
-                    </p>
-                    </a>
-                </div>
-                <div class="certificate_card">
-                    <a href="https://drive.google.com/file/d/1onkWU_mCm6sbFwxnsUdclT0HFEVMQ46D/view?usp=drive_link" target="_blank" class="Rabbitech_card-link">  
-                    <h2 class="card-title">The Dynamics of Cloud Computing</h2>
-                    <img src="resources\img\dynamic_CloudComputing_Participation_page-0001 (1).jpg" alt="Cloud computing certificate">
-                    <p class="card-desc">
-                        <em>Feb 18, 2024</em> The seminar on cloud computing covered versatile <strong>file storage</strong>, seamless <strong>device access</strong>, and <strong>automatic backup</strong>. Key learnings included using <em>real-time collaboration tools</em> for better teamwork, integrating services to boost productivity, and implementing <strong>robust security measures</strong> like encryption. Insights into <strong>efficient file management</strong>, advanced collaboration, and cloud security best practices were provided. Practical tips included <em>organizing files</em>, setting permissions, using search functions, performing backups, and mastering keyboard shortcuts to streamline workflows and optimize productivity.
-                    </p> 
-                    </a>
-                </div>  
-                <!-- other certificates -->
-          </div>
-    </section>
-<hr>
-    <section id="video">
-        <h1>Video Gallery</h1>
-        <div class="video-grid">
-          <div class="video-wrapper">
-            <div class="video-container">
-                <iframe 
-                    src="https://drive.google.com/file/d/1uk1SN1UJ1HG-zLBlQiDr0_lqMMXpUP2Y/preview"  
-                    allow="autoplay" allowfullscreen >
-                </iframe>
-                <div class="title-overlay">
-                    <h2>Rabbitech: automated feeding using Mqtt And Flutter</h2>
+
+                <div class="card-grid" id="project-grid">
+                    <article class="card reveal" data-category="iot">
+                        <div class="card-media">
+                            <img src="resources/legacy/Rabbitech_logo.jpeg" alt="Rabbitech automatic rabbit feeder logo" loading="lazy" width="640" height="360">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge">IoT · Capstone</span>
+                            <h3>Rabbitech Autofeeder with MQTT and Flutter</h3>
+                            <p>An automatic feeding and monitoring system for rabbits, using MQTT, sensors and a Flutter companion app.</p>
+                            <ul class="tags"><li>MQTT</li><li>Flutter</li><li>Arduino</li></ul>
+                            <div class="card-links">
+                                <a href="https://github.com/Fernaniii/Rabbittech_Auto-Feeder" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+                                <a href="#video"><i class="fas fa-play" aria-hidden="true"></i> Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card reveal" data-category="web">
+                        <div class="card-media">
+                            <img src="projects/Landing Page/Thumbnail.png" alt="Screenshot of the honey product landing page" loading="lazy" width="640" height="360">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge">Web</span>
+                            <h3>Product Landing Page</h3>
+                            <p>A responsive landing page for a honey product.</p>
+                            <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+                            <div class="card-links">
+                                <a href="projects/Landing%20Page/index.html" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+                                <a href="https://github.com/Fernaniii/Fenaniii.github.io/tree/main/projects/Landing%20Page" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card reveal" data-category="web">
+                        <div class="card-media">
+                            <img src="projects/calculator/Thumbnail.png" alt="Screenshot of the simple calculator app" loading="lazy" width="640" height="360">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge">Web</span>
+                            <h3>Simple Calculator</h3>
+                            <p>A simple calculator built for practice.</p>
+                            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                            <div class="card-links">
+                                <a href="projects/calculator/index.html" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+                                <a href="https://github.com/Fernaniii/Fenaniii.github.io/tree/main/projects/calculator" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card reveal" data-category="web">
+                        <div class="card-media">
+                            <img src="projects/cashier app/Thumbnail.png" alt="Screenshot of the simple cashier app" loading="lazy" width="640" height="360">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge">Web</span>
+                            <h3>Simple Cashier App</h3>
+                            <p>A simple cashier app built for practice.</p>
+                            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                            <div class="card-links">
+                                <a href="projects/cashier%20app/index.html" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+                                <a href="https://github.com/Fernaniii/Fenaniii.github.io/tree/main/projects/cashier%20app" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card reveal" data-category="web">
+                        <div class="card-media card-media--contain">
+                            <img src="projects/To-Do/icon/To-Do_icon.png" alt="To-Do list app icon" loading="lazy" width="640" height="360">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge">Web</span>
+                            <h3>To-Do List</h3>
+                            <p>An interactive to-do app for adding, checking off and removing tasks.</p>
+                            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                            <div class="card-links">
+                                <a href="projects/To-Do/index.html" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+                                <a href="https://github.com/Fernaniii/Fenaniii.github.io/tree/main/projects/To-Do" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-          </div>
-          
-            <!-- other video -->
+        </section>
+
+        <!-- ============ Certificates ============ -->
+        <section id="certificates" class="section section--alt">
+            <div class="container">
+                <header class="section-head reveal">
+                    <p class="kicker">Learning</p>
+                    <h2>Certificates</h2>
+                </header>
+
+                <div class="card-grid">
+                    <article class="card reveal">
+                        <div class="card-media">
+                            <img src="https://miro.medium.com/v2/resize:fit:3840/format:webp/1*TKXSmO_vghw2G5aDRcf2Ww.png" alt="freeCodeCamp Responsive Web Design certification banner" loading="lazy" width="640" height="360">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge">freeCodeCamp</span>
+                            <h3>Responsive Web Design</h3>
+                            <p>Certification covering semantic HTML, modern CSS layout (Flexbox and Grid) and responsive design.</p>
+                            <ul class="tags"><li>HTML</li><li>CSS</li><li>Responsive</li></ul>
+                            <div class="card-links">
+                                <a href="https://www.freecodecamp.org/certification/Fernaniii/responsive-web-design" target="_blank" rel="noopener"><i class="fas fa-award" aria-hidden="true"></i> View certificate</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card-media">
+                            <img src="resources/img/CODEQUEST_cerrtificate.jpg" alt="CODEQUEST bootcamp certificate" loading="lazy" width="640" height="360">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge">June 2024</span>
+                            <h3>CODEQUEST: From Code Novice to Job Ready Engineer</h3>
+                            <p>Eight-day bootcamp building ASP.NET MVC applications with MS SQL, Entity Framework and Bootstrap.</p>
+                            <ul class="tags"><li>ASP.NET MVC</li><li>MS SQL</li><li>Entity Framework</li><li>C#</li></ul>
+                            <div class="card-links">
+                                <a href="https://drive.google.com/file/d/1pul5_R38Vkcfp_vXZFLFohqDu5khEBrQ/view?usp=drive_link" target="_blank" rel="noopener"><i class="fas fa-award" aria-hidden="true"></i> View certificate</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card-media">
+                            <img src="resources/img/BOSCH_training_organizer%20(1).jpg" alt="Basic Occupational Safety and Health training organizer certificate" loading="lazy" width="640" height="360">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge">May 4, 2024 · Organizer</span>
+                            <h3>Basic Occupational Safety and Health (BOSH) Training</h3>
+                            <p>Organized the seminar — planning and scheduling with Agile and Waterfall, outreach, public speaking and contingency planning.</p>
+                            <ul class="tags"><li>Event management</li><li>Agile</li><li>Public speaking</li></ul>
+                            <div class="card-links">
+                                <a href="https://drive.google.com/file/d/1pSXK2d6RtopqBRrJjIk44VVMLTNJurrC/view?usp=drive_link" target="_blank" rel="noopener"><i class="fas fa-award" aria-hidden="true"></i> View certificate</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card-media">
+                            <img src="resources/img/unlockingFuture_MachineLearning_Python(organizer).png" alt="Introduction to Machine Learning seminar organizer certificate" loading="lazy" width="640" height="360">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge">Apr 3, 2024 · Organizer</span>
+                            <h3>Unlocking the Future: An Introduction to Machine Learning</h3>
+                            <p>Organized a seminar on machine learning with Python and Jupyter Notebooks, handling coordination, outreach and risk management.</p>
+                            <ul class="tags"><li>Python</li><li>Machine Learning</li><li>Jupyter</li></ul>
+                            <div class="card-links">
+                                <a href="https://drive.google.com/file/d/1q2AoHfCab4PPD4Cqh_oIGbLWLt9jkdi1/view?usp=drive_link" target="_blank" rel="noopener"><i class="fas fa-award" aria-hidden="true"></i> View certificate</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card-media">
+                            <img src="resources/img/ADvancing_net_SEcurityCERT.jpg" alt="Advancing Network Security seminar certificate" loading="lazy" width="640" height="360">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge">Seminar</span>
+                            <h3>Advancing Network Security: Implementing Network and Security Policies and the Zero Trust Model Approach</h3>
+                            <p>Network security policy with the Zero Trust model ("never trust, always verify"): access control, MFA, segmentation and continuous monitoring.</p>
+                            <ul class="tags"><li>Zero Trust</li><li>MFA</li><li>Network security</li></ul>
+                            <div class="card-links">
+                                <a href="https://drive.google.com/file/d/1pImqYwiHa0KayNwQgl4foMwh0XeuHH-L/view?usp=drive_link" target="_blank" rel="noopener"><i class="fas fa-award" aria-hidden="true"></i> View certificate</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card-media">
+                            <img src="resources/img/dynamic_CloudComputing_Participation_page-0001%20(1).jpg" alt="The Dynamics of Cloud Computing participation certificate" loading="lazy" width="640" height="360">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge">Feb 18, 2024</span>
+                            <h3>The Dynamics of Cloud Computing</h3>
+                            <p>Cloud storage, device access, automatic backup, real-time collaboration and cloud security best practices like encryption.</p>
+                            <ul class="tags"><li>Cloud</li><li>Security</li><li>Collaboration</li></ul>
+                            <div class="card-links">
+                                <a href="https://drive.google.com/file/d/1onkWU_mCm6sbFwxnsUdclT0HFEVMQ46D/view?usp=drive_link" target="_blank" rel="noopener"><i class="fas fa-award" aria-hidden="true"></i> View certificate</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Video ============ -->
+        <section id="video" class="section">
+            <div class="container">
+                <header class="section-head reveal">
+                    <p class="kicker">Demo</p>
+                    <h2>Video Gallery</h2>
+                </header>
+
+                <div class="video-grid">
+                    <figure class="video-card reveal">
+                        <div class="video-frame">
+                            <iframe src="https://drive.google.com/file/d/1uk1SN1UJ1HG-zLBlQiDr0_lqMMXpUP2Y/preview"
+                                    title="Rabbitech: automated feeding using MQTT and Flutter"
+                                    loading="lazy" allow="autoplay" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>
+                            <h3>Rabbitech: automated feeding using MQTT and Flutter</h3>
+                            <p>Demo of the automatic rabbit feeder controlled through MQTT and a Flutter app.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Contact ============ -->
+        <section id="contact" class="section section--alt">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <p class="kicker">Contact</p>
+                    <h2>Let's work together</h2>
+                    <p>Have a project, role or idea in mind? My inbox is open — I'll get back to you soon.</p>
+                    <div class="hero-cta contact-cta">
+                        <a href="mailto:fernandojosem931@gmail.com" class="btn btn-primary"><i class="fas fa-envelope" aria-hidden="true"></i> Email me</a>
+                        <a href="https://www.linkedin.com/in/fernando-jose-magnaye050505/" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Fernando Jose Magnaye</p>
+            <ul class="socials">
+                <li><a class="social-btn" href="https://www.linkedin.com/in/fernando-jose-magnaye050505/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                <li><a class="social-btn" href="https://github.com/Fernaniii" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                <li><a class="social-btn" href="mailto:fernandojosem931@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+            </ul>
+            <a href="#top" class="back-top">Back to top <i class="fas fa-arrow-up" aria-hidden="true"></i></a>
         </div>
-      </section>
-        
-    <footer>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/fernando-jose-magnaye050505/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/Fernaniii" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="mailto:fernandojosem931@gmail.com"><i class="fas fa-envelope"></i></a></li>
-        </ul>
     </footer>
 </body>
 </html>

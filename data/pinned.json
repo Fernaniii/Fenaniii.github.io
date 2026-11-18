@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "name": "Fenaniii.github.io",
+    "fullName": "Fernaniii/Fenaniii.github.io",
+    "description": "Self Enhancement",
+    "url": "https://github.com/Fernaniii/Fenaniii.github.io",
+    "homepage": "https://fernaniii.github.io/Fenaniii.github.io/",
+    "language": "HTML",
+    "stars": 0,
+    "pushedAt": "2026-11-18T00:13:36Z"
+  },
+  {
+    "name": "Fernaniii",
+    "fullName": "Fernaniii/Fernaniii",
+    "description": "Config files for my GitHub profile.",
+    "url": "https://github.com/Fernaniii/Fernaniii",
+    "homepage": "https://github.com/Fernaniii",
+    "language": "",
+    "stars": 0,
+    "pushedAt": "2026-03-26T02:53:33Z"
+  },
+  {
+    "name": "Obsidian-Notes",
+    "fullName": "Fernaniii/Obsidian-Notes",
+    "description": "Testing Git Obsidian",
+    "url": "https://github.com/Fernaniii/Obsidian-Notes",
+    "homepage": "",
+    "language": "",
+    "stars": 0,
+    "pushedAt": "2026-02-06T12:10:05Z"
+  }
+]

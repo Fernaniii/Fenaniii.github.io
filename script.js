@@ -20,7 +20,9 @@
     var theme = currentTheme();
     if (themeMeta) themeMeta.setAttribute('content', theme === 'light' ? '#fafaf9' : '#0d0d10');
     if (themeToggle) {
-      themeToggle.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+      var label = theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme';
+      themeToggle.setAttribute('aria-label', label);
+      themeToggle.setAttribute('data-tooltip', label);
     }
   }
 
@@ -48,6 +50,7 @@
     menu.classList.toggle('open', open);
     navToggle.setAttribute('aria-expanded', String(open));
     navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    navToggle.setAttribute('data-tooltip', open ? 'Close menu' : 'Open menu');
     var icon = navToggle.querySelector('i');
     if (icon) icon.className = open ? 'fas fa-xmark' : 'fas fa-bars';
   }
@@ -209,6 +212,104 @@
     };
   }
 
+  /* README preview: fetched lazily on first hover/focus, cached for the session. */
+  var canHover = !!(window.matchMedia && window.matchMedia('(hover: hover)').matches);
+  var readmeCache = {};
+  var peekId = 0;
+
+  // Turns raw README markdown into a short plain-text overview.
+  function readmeExcerpt(md) {
+    var t = String(md || '')
+      .replace(/<!--[\s\S]*?-->/g, ' ')
+      .replace(/```[\s\S]*?```/g, ' ')
+      .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')       // images and badges
+      .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')     // [text](url) -> text
+      .replace(/<[^>]+>/g, ' ')                    // html tags
+      .replace(/^\s{0,3}#{1,6}\s*/gm, '')          // headings
+      .replace(/^\s*>\s?/gm, '')                   // blockquotes
+      .replace(/^\s*[-*+]\s+/gm, '')               // bullets
+      .replace(/^\s*([-=*_]\s*){3,}$/gm, ' ')      // rules
+      .replace(/[`*_~|]/g, '')                     // inline markers
+      .replace(/\s+/g, ' ')
+      .trim();
+    if (t.length > 350) t = t.slice(0, 350).replace(/\s+\S*$/, '') + '…';
+    return t;
+  }
+
+  function loadReadme(fullName) {
+    if (readmeCache[fullName]) return readmeCache[fullName];
+    var key = 'readme:' + fullName;
+    try {
+      var cached = sessionStorage.getItem(key);
+      if (cached !== null) return (readmeCache[fullName] = Promise.resolve(cached));
+    } catch (e) { /* storage unavailable */ }
+
+    var path = fullName.split('/').map(encodeURIComponent).join('/');
+    var p = (window.fetch
+      ? fetch('https://api.github.com/repos/' + path + '/readme', { headers: { Accept: 'application/vnd.github.raw+json' } })
+      : Promise.reject(new Error('fetch unavailable')))
+      .then(function (res) {
+        if (res.status === 404) return '';          // no README: remember that
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.text();
+      })
+      .then(function (md) {
+        var ex = readmeExcerpt(md);
+        try { sessionStorage.setItem(key, ex); } catch (e) { /* ignore */ }
+        return ex;
+      })
+      .catch(function () { delete readmeCache[fullName]; return null; }); // failure: not cached, retry next time
+    return (readmeCache[fullName] = p);
+  }
+
+  function attachReadmePeek(card, body, links, r) {
+    var peek = el('div', 'repo-peek');
+    peek.id = 'repo-peek-' + (++peekId);
+    peek.setAttribute('role', 'tooltip');
+    peek.appendChild(el('span', 'repo-peek-label', 'README'));
+    var text = el('p', 'repo-peek-text');
+    peek.appendChild(text);
+    card.appendChild(peek);
+    card.setAttribute('aria-describedby', peek.id);
+
+    var filled = false;
+    function fill() {
+      if (filled) return;
+      text.textContent = 'Loading…';
+      loadReadme(r.fullName).then(function (ex) {
+        if (ex === null) { text.textContent = r.description || 'README unavailable right now.'; return; }
+        filled = true;
+        text.textContent = ex || r.description || 'No README available.';
+      });
+    }
+    function setOpen(open) {
+      card.classList.toggle('peek-open', open);
+      if (open) fill();
+    }
+
+    if (canHover) {
+      card.addEventListener('mouseenter', function () { setOpen(true); });
+      card.addEventListener('mouseleave', function () { setOpen(false); });
+      card.addEventListener('focusin', function () { setOpen(true); });
+      card.addEventListener('focusout', function (e) {
+        if (!card.contains(e.relatedTarget)) setOpen(false);
+      });
+    } else {
+      var btn = el('button', 'repo-peek-btn');
+      btn.type = 'button';
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-controls', peek.id);
+      btn.appendChild(icon('fas fa-book-open'));
+      btn.appendChild(document.createTextNode(' Overview'));
+      btn.addEventListener('click', function () {
+        var open = !card.classList.contains('peek-open');
+        setOpen(open);
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      links.appendChild(btn);
+    }
+  }
+
   function renderRepoCard(r, grid, pinned) {
     var card = el('article', 'card repo-card reveal');
     var body = el('div', 'card-body');
@@ -241,6 +342,7 @@
     body.appendChild(links);
 
     card.appendChild(body);
+    attachReadmePeek(card, body, links, r);
     grid.appendChild(card);
     observeReveal(card);
   }

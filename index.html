@@ -32,6 +32,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
+    <script src="repos.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -48,6 +49,7 @@
                 <li><a href="#welcome">Home</a></li>
                 <li><a href="#timeline">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#repositories">Repos</a></li>
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#video">Video</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -266,8 +268,34 @@
             </div>
         </section>
 
+        <!-- ============ Repositories ============ -->
+        <!-- Pinned: data/pinned.json (GitHub Action). Recent: GitHub API. Settings: repos.js -->
+        <section id="repositories" class="section section--alt">
+            <div class="container">
+                <header class="section-head reveal">
+                    <p class="kicker">Open Source</p>
+                    <h2>Repositories</h2>
+                    <p class="section-lead">Highlighted work and what I've pushed lately on GitHub.</p>
+                </header>
+
+                <div class="repo-group" id="pinned-group" hidden>
+                    <h3 class="repo-group-title"><i class="fas fa-thumbtack" aria-hidden="true"></i> Pinned</h3>
+                    <div class="card-grid repo-grid" id="pinned-grid"></div>
+                </div>
+
+                <div class="repo-group" id="recent-group" hidden>
+                    <h3 class="repo-group-title"><i class="fas fa-clock-rotate-left" aria-hidden="true"></i> Recent Activity</h3>
+                    <div class="card-grid repo-grid" id="recent-grid"></div>
+                </div>
+
+                <p class="repo-more reveal">
+                    <a href="https://github.com/Fernaniii" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> See everything on GitHub <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </p>
+            </div>
+        </section>
+
         <!-- ============ Certificates ============ -->
-        <section id="certificates" class="section section--alt">
+        <section id="certificates" class="section">
             <div class="container">
                 <header class="section-head reveal">
                     <p class="kicker">Learning</p>
@@ -369,7 +397,7 @@
         </section>
 
         <!-- ============ Video ============ -->
-        <section id="video" class="section">
+        <section id="video" class="section section--alt">
             <div class="container">
                 <header class="section-head reveal">
                     <p class="kicker">Demo</p>
@@ -393,7 +421,7 @@
         </section>
 
         <!-- ============ Contact ============ -->
-        <section id="contact" class="section section--alt">
+        <section id="contact" class="section">
             <div class="container">
                 <div class="contact-card reveal">
                     <p class="kicker">Contact</p>

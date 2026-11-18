@@ -347,6 +347,31 @@ section { scroll-margin-top: var(--nav-h); }
 .card-links a { color: var(--accent); font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 6px; }
 .card-links a:hover { color: var(--accent-hover); text-decoration: underline; text-underline-offset: 3px; }
 
+/* ================== Currently Building ================== */
+.section-lead { margin-top: 10px; color: var(--muted); max-width: 60ch; }
+
+.repo-group[hidden] { display: none; }
+.repo-group + .repo-group { margin-top: clamp(32px, 5vw, 52px); }
+.repo-group-title {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 18px; font-size: 0.85rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+}
+.repo-group-title i { color: var(--accent); font-size: 0.95em; }
+
+.repo-name { font-size: 1.1rem; line-height: 1.35; overflow-wrap: anywhere; }
+.repo-name i { color: var(--accent); font-size: 0.9em; margin-right: 2px; }
+
+.repo-meta { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--muted); font-size: 0.85rem; }
+.repo-meta li { display: inline-flex; align-items: center; gap: 6px; }
+.repo-meta i { font-size: 0.8em; }
+.repo-meta .repo-lang { color: var(--accent); font-size: 0.6em; }
+.repo-meta .fa-star { color: #eab308; }
+
+.repo-more { margin-top: 28px; }
+.repo-more a { color: var(--accent); font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+.repo-more a:hover { color: var(--accent-hover); text-decoration: underline; text-underline-offset: 3px; }
+
 /* ================== Video ================== */
 .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 24px; }
 .video-card {

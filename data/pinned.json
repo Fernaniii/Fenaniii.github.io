@@ -1,5 +1,15 @@
 [
   {
+    "name": "fernaniii-3d-avatar",
+    "fullName": "Fernaniii/fernaniii-3d-avatar",
+    "description": "my avatar",
+    "url": "https://github.com/Fernaniii/fernaniii-3d-avatar",
+    "homepage": "",
+    "language": "TypeScript",
+    "stars": 0,
+    "pushedAt": "2026-11-20T13:54:51Z"
+  },
+  {
     "name": "Fenaniii.github.io",
     "fullName": "Fernaniii/Fenaniii.github.io",
     "description": "Self Enhancement",
@@ -7,17 +17,7 @@
     "homepage": "https://fernaniii.github.io/Fenaniii.github.io/",
     "language": "HTML",
     "stars": 0,
-    "pushedAt": "2026-11-20T14:24:57Z"
-  },
-  {
-    "name": "Fernaniii",
-    "fullName": "Fernaniii/Fernaniii",
-    "description": "Config files for my GitHub profile.",
-    "url": "https://github.com/Fernaniii/Fernaniii",
-    "homepage": "https://github.com/Fernaniii",
-    "language": "",
-    "stars": 0,
-    "pushedAt": "2026-03-26T02:53:33Z"
+    "pushedAt": "2026-11-20T14:25:06Z"
   },
   {
     "name": "Obsidian-Notes",
